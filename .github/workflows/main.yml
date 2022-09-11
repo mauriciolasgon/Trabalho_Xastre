@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.GH_PACKAGES_TOKEN }}
       
     - run: |
-        docker build -t ghcr.io/trab_xastre/trabalho_xastre/demovideo:latest -f PATH/Dockerfile .
+        docker build -t ghcr.io/trab_xastre/trabalho_xastre/demovideo:latest -f Dockerfile .
         docker tag ghcr.io/trab_xastre/Trabalho_Xastre/demovideo:latest ghcr.io/trab_xastre/Trabalho_Xastre/demovideo:${{ github.sha }}
     - run: |
         docker push ghcr.io/trab_xastre/Trabalho_Xastre/demovideo:latest
