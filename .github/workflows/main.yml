@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
     
     - uses: azure/docker-login@v1
       with:
@@ -17,8 +17,8 @@ jobs:
         password: ${{ secrets.GH_PACKAGES_TOKEN }}
       
     - run: |
-        docker build -t ghcr.io/trab_xastre/trabalho_xastre/demovideo:latest -f Dockerfile .
-        docker tag ghcr.io/trab_xastre/Trabalho_Xastre/demovideo:latest ghcr.io/trab_xastre/Trabalho_Xastre/demovideo:${{ github.sha }}
+        docker build -t ghcr.io/mauricio/trabalho_xastre/demovideo:latest -f Dockerfile .
+        docker tag ghcr.io/mauricio/trabalho_xastre/demovideo:latest ghcr.io/mauricio/trabalho_xastre/demovideo:${{ github.sha }}
     - run: |
-        docker push ghcr.io/trab_xastre/Trabalho_Xastre/demovideo:latest
-        docker push ghcr.io/trab_xastre/Trabalho_Xastre/demovideo:${{ github.sha }}
+        docker push ghcr.io/mauricio/trabalho_xastre/demovideo:latest
+        docker push ghcr.io/mauricio/trabalho_xastre/demovideo:${{ github.sha }}
