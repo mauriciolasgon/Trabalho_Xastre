@@ -20,5 +20,5 @@ jobs:
         docker build -t meu_sql:5.7 -f Dockerfile .
         docker tag meu_sql:5.7  meu_sql:${{ github.sha }}
     - run: |
-        docker push ghcr.io/meu_sql:5.7
-        docker push ghcr.io/meu_sql:${{ github.sha }}
+        docker push meu_sql:5.7
+        docker push meu_sql:${{ github.sha }}
