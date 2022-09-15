@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.GH_PACKAGES_TOKEN }}
       
     - run: |
-        docker build -t meu_sql -f Dockerfile .
+        docker build -t meu_sql:5.7 -f Dockerfile .
         docker tag ghcr.io/mauriciolasgon/trabalho_xastre/mysql:5.7 ghcr.io/mauriciolasgon/trabalho_xastre/mysql:${{ github.sha }}
     - run: |
         docker push ghcr.io/mauriciolasgon/trabalho_xastre/mysql:5.7
