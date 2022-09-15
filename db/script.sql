@@ -10,4 +10,5 @@ INSERT INTO `fruit`(`fruit_id`,`name`,`variety`) VALUES
 (2,'pear','comice'),
 (3,'orange','navel'),
 (4,'pear','bastlett'),
-(5,`banana','plantain');
+(5,'banana','plantain');
+(6,'ola','mundo');
