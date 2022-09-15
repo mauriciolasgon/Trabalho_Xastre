@@ -1,3 +1,4 @@
 FROM mysql
 ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes
-ADD . C:\Users\maugo\OneDrive\Documentos\Mauricio
+RUN mkdir /banco
+COPY script.sql /banco/
