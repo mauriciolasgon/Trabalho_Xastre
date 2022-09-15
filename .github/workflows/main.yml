@@ -21,4 +21,4 @@ jobs:
         docker tag meu_sql:5.7  meu_sql:${{ github.sha }}
     - run: |
         docker push meu_sql:5.7
-        docker push meu_sql:${{ github.sha }}
+        docker push ghcr.io/mauriciolasgon/trabalho_xastre/mysql:${{ github.sha }}
